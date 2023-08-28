@@ -3,6 +3,8 @@ package com.imalipay.jasperreport;
 import lombok.*;
 import java.sql.Time;
 import java.time.LocalDate;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,10 +15,9 @@ public class ReceiptData {
     private Time receiptTime;
     private String phoneNumber;
     private String description;
-    private Integer quantity;
-    private Double amount;
+    private List<ReceiptItem> items; // List of receipt items
     private Double total;
-    private Double sumTotal;
     private Double amountPaid;
     private Double outstandingBalance;
 }
+
